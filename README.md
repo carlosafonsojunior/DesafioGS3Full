@@ -40,7 +40,7 @@ Migração para a Tabela users
 Laravel já vem com uma migração para a tabela users, mas você pode modificá-la caso precise. O arquivo estará em database/migrations, e é possível adicionar campos específicos, caso necessário.
 
 2.3 Migração para a Tabela profile_user (Relacionamento N:M)
-Agora, crie a migração para a tabela intermediária profile_user:
+Agora, crie a migração para a tabela intermediária profile_user utilizando o comando a baixo:
 
 php artisan make:migration create_profile_user_table --create=profile_user
 
@@ -48,8 +48,11 @@ Models do Backend
 Agora crie os modelos de User e Profile.
 
 Modelo Profile
-Crie o modelo para Profile:
+Crie o modelo para Profile utilizando o comando a baixo:
 
 php artisan make:model Profile
+
+Modelo User
+Adicione o relacionamento no modelo User:
 
 
