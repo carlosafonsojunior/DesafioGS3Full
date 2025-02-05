@@ -55,4 +55,12 @@ php artisan make:model Profile
 Modelo User
 Adicione o relacionamento no modelo User:
 
+Controlador de Usuários
+Agora crie um controlador para os usuários:
+
+php artisan make:controller UserController
+
+No controlador UserController, crie métodos como store, update, destroy para gerenciar os usuários.
+
+
 
