@@ -26,3 +26,12 @@ class UserController extends Controller
         return response()->json(null, 204);
     }
 }
+
+public function show(User $user)
+{
+    if (auth()->user()->id !== $user->id) {
+        abort(403, 'Você não tem permissão para acessar essas informações.');
+    }
+
+    return response()->json($user);
+}
