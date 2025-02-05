@@ -31,4 +31,25 @@ composer create-project --prefer-dist laravel/laravel sistema-de-usuarios
 # Passo 2: Navegar para o diretório do projeto
 cd sistema-de-usuarios
 
+--Estrutura do Banco de Dados
+Crie as migrações para as tabelas users, profiles e profile_user.
+
+php artisan make:migration create_profiles_table --create=profiles
+
+Migração para a Tabela users
+Laravel já vem com uma migração para a tabela users, mas você pode modificá-la caso precise. O arquivo estará em database/migrations, e é possível adicionar campos específicos, caso necessário.
+
+2.3 Migração para a Tabela profile_user (Relacionamento N:M)
+Agora, crie a migração para a tabela intermediária profile_user:
+
+php artisan make:migration create_profile_user_table --create=profile_user
+
+Models do Backend
+Agora crie os modelos de User e Profile.
+
+Modelo Profile
+Crie o modelo para Profile:
+
+php artisan make:model Profile
+
 
